@@ -1,4 +1,23 @@
+/* center header text */
+/* style background color to flow with background image once selected */
+/* if time select font style */
 
+head {
+  align-items: center;
+}
 
+/* TODO stack play button under text */
+/* link background image */
 
+main {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex: column;
+  justify-content: center;
+  align-items: center;
+}
 
+.playButton {
+
+}
