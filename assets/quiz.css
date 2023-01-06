@@ -35,6 +35,19 @@ body {
   box-shadow: 0 0 30px 5px;
 }
 
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 15px;
+  margin: 75px 100px;
+}
+
+.button {
+  border: aqua 100%, 30%;
+  background-color: aqua;
+
+}
+
 
 /* set background color for body */
 /* see if we can change color of background based off question correct or incorrect pretty sure this is done in js*/

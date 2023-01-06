@@ -2,8 +2,11 @@
 /* style background color to flow with background image once selected */
 /* if time select font style */
 
-head {
-  text-align: center;
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 /* TODO stack play button under text */
@@ -14,11 +17,12 @@ main {
   margin: 0;
   display: flex;
   flex: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   background-color: cyan;
-  max-height: 100vh;
-  max-width: 100vh;
+  height: 100vh;
+  max-width: 100vw;
+  border-radius: 10px;
 }
 
 /* .playButton {
