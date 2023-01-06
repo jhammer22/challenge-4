@@ -43,10 +43,27 @@ body {
 }
 
 .button {
-  border: aqua 100%, 30%;
+  border: black 100%, 30%;
   background-color: aqua;
-
+  border-radius: 10px;
 }
+
+.button:hover {
+  border-color: black;
+}
+
+.start-button, .next-button {
+  border: black 100%, 30%;
+  background-color: aqua;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.start-button:hover, .next-button:hover {
+  border-color: black;
+}
+
+
 
 
 /* set background color for body */
