@@ -3,7 +3,7 @@
 /* if time select font style */
 
 head {
-  align-items: center;
+  text-align: center;
 }
 
 /* TODO stack play button under text */
@@ -16,8 +16,11 @@ main {
   flex: column;
   justify-content: center;
   align-items: center;
+  background-color: cyan;
+  max-height: 100vh;
+  max-width: 100vh;
 }
 
-.playButton {
+/* .playButton {
 
-}
+} */
