@@ -8,8 +8,8 @@
 // secinitial
 
 // const=constant refrence to a value may need to be changed to var once timer and scoreboard is added
-
 var startButton = document.getElementById('start-button');
+var nextButton = document.getElementById('next-button')
 var questionsContainerElement = document.getElementById('question-container'); 
 var questionElement = document.getElementById('question');
 var questionElement = document.getElementById('answer-buttons'); 
@@ -49,7 +49,11 @@ function showQuestion(question) {
   });
 };
 
-
+//resets everything back to default state every time we get a new question
+function resetState() {
+  nextButton.classList.add('hide') // hides next button until answer is selected
+  answerButtonsElement.removeChild(answerButtonsElement.firstChild)
+};
 
 function selectAnswer() {
 
