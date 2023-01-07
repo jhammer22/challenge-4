@@ -23,7 +23,7 @@ startButton.addEventListener('click', startGame);
   // if start button is pressed start timer
   // return hidden question
 function startGame() {
-  console.log('game started')
+  console.log('game started') //logs if start button is clicked
   startButton.classList.add('hide') // hides start button once selected
   shuffledQuestions = questions.sort(() => Math.random() - .5) //gives random array of questions
   questionsContainerElement.classList.remove('hide') //removes hide from questions once previous question has been answered
@@ -36,8 +36,20 @@ function setNextQuestion() {
 };
 
 function showQuestion(question) {
-  questionElement.innerText = question.question
-}
+  questionElement.innerText = question.question;
+  question.answers.forEach(answer => {
+     var button = document.createElement('button')
+    button.innerText = answer.text
+    button.classList.add('button');
+    if (answer.correct) { 
+      button.dataset.correct = answer.correct //.dataset add data attr to button
+    } // done this way because answer is a string not a boolean
+    button.addEventListener('click', selectAnswer);
+    // answerButtonsElement.appendChild(button); 
+  });
+};
+
+
 
 function selectAnswer() {
 
@@ -60,7 +72,7 @@ const questions = [
       { text: 'Unicorn Farts', correct: false}
     ]
   }
-]
+];
   
 
 
