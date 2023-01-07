@@ -32,7 +32,7 @@ function setNextQuestion() {
 };
 
 function showQuestion(question) {
-  
+
 }
 
 function selectAnswer() {
@@ -41,14 +41,14 @@ function selectAnswer() {
 
 // questions
   // event listener for answer
-  // way to check if answer is true or false
+  // way to check if answer is true or false //done
   // store answer
   // if true reveal next question
   // if false subtract 15sec and move to next question
   // if timer reaches 0 stop game display score and do bellow
 const questions = [
   {
-    question: 'How does positrac work in a Plymouth',
+    question: 'How does positrac work in a Plymouth?',
     answers: [
       { text: 'Nobody knows', correct: true },
       { text: 'Osmosis', correct: false},
