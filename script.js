@@ -6,33 +6,37 @@
 // next-button
 // finitial
 // secinitial
-// const=constant refrence to a value
 
-const startButton = document.getElementById('start-button');
-const shuffledQuestions, currentQuestionIndex;
+// const=constant refrence to a value may need to be changed to var once timer and scoreboard is added
+
+var startButton = document.getElementById('start-button');
+var questionsContainerElement = document.getElementById('question-container'); 
+var questionElement = document.getElementById('question');
+var questionElement = document.getElementById('answer-buttons'); 
+let shuffledQuestions, currentQuestionIndex;
 
 // click event when start button is pressed do below
 startButton.addEventListener('click', startGame);
 
 // if start button is pressed display question 
-  // if not display null
+  // if not display null // do not need this statement because loop does not start until button is clicked
   // if start button is pressed start timer
   // return hidden question
 function startGame() {
   console.log('game started')
-  startButton.classList.add('hide')
-  questionsContainerElement.classList.remove('hide')
-  shuffledQuestions = questions.sort(() => Math.random() - .5)
+  startButton.classList.add('hide') // hides start button once selected
+  shuffledQuestions = questions.sort(() => Math.random() - .5) //gives random array of questions
+  questionsContainerElement.classList.remove('hide') //removes hide from questions once previous question has been answered
   currentQuestionIndex = 0
   setNextQuestion()
 };
 
 function setNextQuestion() {
-  showQuestion(shuffledQuestions[currentQuestionIndex]) 
+  showQuestion(shuffledQuestions[currentQuestionIndex]); 
 };
 
 function showQuestion(question) {
-
+  questionElement.innerText = question.question
 }
 
 function selectAnswer() {
@@ -53,7 +57,7 @@ const questions = [
       { text: 'Nobody knows', correct: true },
       { text: 'Osmosis', correct: false},
       { text: 'Rainbow Dust', correct: false},
-      { text: 'Unicorn Farts'}
+      { text: 'Unicorn Farts', correct: false}
     ]
   }
 ]
