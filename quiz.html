@@ -1,32 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="assets/css/reset.css" />
+  <!-- <link rel="stylesheet" href="assets/css/reset.css" /> -->
   <link rel="stylesheet" href="./assets/quiz.css">
   <title>Question page</title>
 </head>
+
 <body>
-<!-- TODO container that holds hidden questions start button and next button next button being hidden until next is clicked -->
-<div class="container">
-  <div id="question-container" class="hide">
-    <div id="question">Question</div>
-    <div id="answer-buttons" class="button-grid">
-      <button class="button">Answer 1</button>
-      <button class="button">Answer 2</button>
-      <button class="button">Answer 3</button>
-      <button class="button">Answer 4</button>
+  
+  <div class="container">
+    <div id="question-container" class="hide">
+      <div id="question">Question</div>
+      <div id="answer-buttons" class="button-grid">
+        <button class="button">A</button>
+        <button class="button">B</button>
+        <button class="button">C</button>
+        <button class="button">D</button>
+      </div>
     </div>
-  </div>
 
     <div id="question-container" class="hide">
       <button id="start-button" class="start-button">Start</button>
       <button id="next-button" class="next-button">Next</button>
     </div>
     <!-- timer here maybe -->
-</div>
+  </div>
 
   <!-- this may need to go to another html -->
 
@@ -41,30 +43,9 @@
     <input type="text" id="secinitial" name="secinitial"><br><br>
     <input type="submit" value="submit">
   </form>
-<!--research how to switch to another question once answer is given is this done in html or js html event??? -->
-<!-- this is done in js and hide class in html -->
+  
 
-
-
-
-
-
-
-
+  <script src="script.js"></script>
 </body>
 
 </html>
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
