@@ -6,7 +6,8 @@
 /* start-button */
 /* next-button */
 /* initials */
-*, {
+
+* {
   box-sizing: border-box;
   font-family: arial;
 }
@@ -20,7 +21,7 @@ body {
   height: 100vh;
   justify-content: center;
   align-items: center;
-  background-color: cyan;
+  background-color: blueviolet;
 
 }
 
@@ -44,7 +45,7 @@ body {
 
 .button {
   border: black 100%, 30%;
-  background-color: aqua;
+  background-color: blueviolet;
   border-radius: 10px;
 }
 
@@ -54,15 +55,24 @@ body {
 
 .start-button, .next-button {
   border: black 100%, 30%;
-  background-color: aqua;
+  background-color: blueviolet;
   border-radius: 10px;
-  padding: 10px;
+  padding: 10px 20px;
 }
 
 .start-button:hover, .next-button:hover {
   border-color: black;
 }
 
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hide {
+  display: none;
+}
 
 
 
