@@ -80,13 +80,12 @@ const questions = [
       { text: 'Alot', correct: true},
       { text: 'Sure did',  correct: true},
       { text: 'You had better believ it', correct: true},
-    ]
+    ],
+    // question: ''
 
   },
 
 ];
-  
-
 
 // once all questions have been answered and score is logged
   // display score
@@ -94,6 +93,8 @@ const questions = [
   // store score  and initial in local to be called by leader board     
   // display score to user in leader board
   // display initials next to score in leader board
+
+
 
   // completed
     // if start button is pressed display question 
