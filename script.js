@@ -1,5 +1,5 @@
 // ids used in html
-
+// timer
 // finitial
 // secinitial
 
@@ -9,6 +9,7 @@ var nextButton = document.getElementById('next-button')
 var questionsContainerElement = document.getElementById('question-container'); 
 var questionElement = document.getElementById('question'); 
 var answerButtonsElement = document.getElementById('answer-buttons');
+// var timerElement = document.getElementById('timer')
 let shuffledQuestions, currentQuestionIndex;
 
 
@@ -89,6 +90,8 @@ function clearStatusClass(element) {
   element.classList.remove('correct')
   element.classList.remove('wrong')
 };
+
+
 
 
 const questions = [
