@@ -8,11 +8,11 @@
 // secinitial
 
 // const=constant refrence to a value may need to be changed to var once timer and scoreboard is added
-var startButton = document.getElementById('start-button');
-var nextButton = document.getElementById('next-button')
-var questionsContainerElement = document.getElementById('question-container'); 
-var questionElement = document.getElementById('question');
-var questionElement = document.getElementById('answer-buttons'); // this should allow answer buttons to be called in a function??? 
+const startButton = document.getElementById('start-button');
+const nextButton = document.getElementById('next-button')
+const questionsContainerElement = document.getElementById('question-container'); 
+const questionElement = document.getElementById('question', 'answer-buttons');
+// const questionElement = document.getElementById('answer-buttons'); // this should allow answer buttons to be called in a function??? 
 // var answerButtonsElement
 let shuffledQuestions, currentQuestionIndex;
 
@@ -45,7 +45,7 @@ function showQuestion(question) {
       button.dataset.correct = answer.correct //.dataset add data attr to button
     } // done this way because answer is a string not a boolean
     button.addEventListener('click', selectAnswer);
-    // answerButtonsElement.appendChild(button); //answerButtonElement not defined
+    answerButtonsElement.appendChild(button); 
   });
 };
 
