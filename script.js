@@ -22,7 +22,7 @@ nextButton.addEventListener('click', () => {
   
   
 function startGame() {
-  console.log('game started') //logs if start button is clicked
+  console.log("game started") //logs if start button is clicked
   startButton.classList.add('hide') // hides start button once clicked and first question shows
   questionsContainerElement.classList.remove('hide') //removes hide from questions once start button is clicked
   shuffledQuestions = questions.sort(() => Math.random() - .5) //gives random array from questions
@@ -40,7 +40,7 @@ function setNextQuestion() {
 function showQuestion(question) {
   questionElement.innerText = question.question;
   question.answers.forEach(answer => {
-     var button = document.createElement('button') //defined button 
+     var button = document.createElement('button'); //defined button 
     button.innerText = answer.text
     button.classList.add('button');
     if (answer.correct) { 
@@ -48,7 +48,7 @@ function showQuestion(question) {
     } // done this way because answer is a string not a boolean
     button.addEventListener('click', selectAnswer); // event listener for answer
     answerButtonsElement.appendChild(button); 
-  });
+  })
 };
 
 
@@ -93,23 +93,59 @@ function clearStatusClass(element) {
 
 const questions = [
   {
-    question: 'How does positrac work in a Plymouth?',
+    question: "How does positrac work in a Plymouth?",
     answers: [
-      { text: 'Nobody knows', correct: true },
-      { text: 'Osmosis', correct: false},
-      { text: 'Rainbow Dust', correct: false},
-      { text: 'Unicorn Farts', correct: false}
+      { text: "Nobody knows", correct: true },
+      { text: "Osmosis", correct: false },
+      { text: "Rainbow Dust", correct: false },
+      { text: "Unicorn Farts", correct: false }
     ]
   },
   {
-    question: 'Did you stuggle with this challenge',
+    question: "Did you struggle with this challenge",
     answers: [
-      { text: 'Yes', correct: true},
-      { text: 'A lot', correct: true},
-      { text: 'Sure did',  correct: true},
-      { text: 'You had better believe it', correct: true},
+      { text: "Yes", correct: true },
+      { text: "A lot", correct: true },
+      { text: "Sure did",  correct: true },
+      { text: "You had better believe it", correct: true },
     ]
-  }
+  },
+  {
+    question: "When writing loops what should you double check for so you don't crash your browser?",
+    answers: [
+      { text: "Fruit", correct: false },
+      { text: "Gremlins", correct: false },
+      { text: "Check for eventual false", correct: true },
+      { text: "Monsters under the bed", correct: true }
+    ]
+  },
+  {
+    question: "When writing a string what is the difference between single and double quotes",
+    answers:[
+      { text: "Nothing", correct: true },
+      { text: "Internal document string vs User displayed string elements", correct: true },
+      { text: "User preference", correct: true },
+      { text: "Easier to read", correct: true },
+    ]
+  },
+  {
+    question: "What will Josh change his Zoom name to today?",
+    answers:[
+      { text: "Papa Splice", correct: true },
+      { text: "Daddy Josh", correct: true },
+      { text: "Repo Master", correct: true },
+      { text: "Bob Ross", correct: true },
+    ]
+  },
+  {
+    question: "Where do you link JavaScript in HTML",
+    answers:[
+      { text: "Yes", correct: false },
+      { text: "After body", correct: true },
+      { text: "In the head", correct: false },
+      { text: "What is JavaScript", correct: false },
+    ]
+  },
 
 ];
 
