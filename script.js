@@ -7,7 +7,8 @@
 var startButton = document.getElementById('start-button');
 var nextButton = document.getElementById('next-button')
 var questionsContainerElement = document.getElementById('question-container'); 
-var questionElement = document.getElementById('question', 'answer-buttons'); 
+var questionElement = document.getElementById('question'); 
+var answerButtonsElement = document.getElementById('answer-buttons');
 let shuffledQuestions, currentQuestionIndex;
 
 
@@ -19,13 +20,16 @@ startButton.addEventListener('click', startGame);
 function startGame() {
   console.log('game started') //logs if start button is clicked
   startButton.classList.add('hide') // hides start button once clicked and first question shows
-  shuffledQuestions = questions.sort(() => Math.random() - .5) //gives random array of questions
   questionsContainerElement.classList.remove('hide') //removes hide from questions once start button is clicked
+  shuffledQuestions = questions.sort(() => Math.random() - .5) //gives random array of questions
   currentQuestionIndex = 0
   setNextQuestion()
+  
+  
 };
 
 function setNextQuestion() {
+  resetState();
   showQuestion(shuffledQuestions[currentQuestionIndex]); 
 };
 
@@ -38,15 +42,19 @@ function showQuestion(question) {
     if (answer.correct) { 
       button.dataset.correct = answer.correct //.dataset add data attr to button
     } // done this way because answer is a string not a boolean
-    button.addEventListener('click', selectAnswer);
+    button.addEventListener('click', selectAnswer); // event listener for answer
     answerButtonsElement.appendChild(button); 
   });
 };
 
 
 function resetState() {
-  nextButton.classList.add('hide') // hides next button until answer is selected
-  answerButtonsElement.removeChild(answerButtonsElement.firstChild)
+  nextButton.classList.add('hide') // hides next button after new question appears
+  // answerButtonsElement.removeChild(answerButtonsElement.firstChild)
+  while (answerButtonsElement.firstChild) {
+    answerButtonsElement.removeChild(answerButtonsElement.firstChild)
+  }
+
 }; //resets everything back to default state every time we get a new question
 
 function selectAnswer() {
@@ -54,7 +62,7 @@ function selectAnswer() {
 };
 
 // questions
-  // event listener for answer
+  
   // if false subtract 15sec and move to next question
   // store answer
   // if timer reaches 0 stop game display score and do bellow
@@ -71,9 +79,9 @@ const questions = [
     question: 'Did you stuggle with this challenge',
     answers: [
       { text: 'Yes', correct: true},
-      { text: 'Alot', correct: true},
+      { text: 'A lot', correct: true},
       { text: 'Sure did',  correct: true},
-      { text: 'You had better believ it', correct: true},
+      { text: 'You had better believe it', correct: true},
     ],
     // question: ''
 
