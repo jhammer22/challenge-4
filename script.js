@@ -1,19 +1,13 @@
-// ids used
-// question-container
-// question
-// answer-buttons
-// start-button
-// next-button
+// ids used in html
+
 // finitial
 // secinitial
 
-// const=constant refrence to a value may need to be changed to var once timer and scoreboard is added
-const startButton = document.getElementById('start-button');
-const nextButton = document.getElementById('next-button')
-const questionsContainerElement = document.getElementById('question-container'); 
-const questionElement = document.getElementById('question', 'answer-buttons');
-// const questionElement = document.getElementById('answer-buttons'); // this should allow answer buttons to be called in a function??? 
-// var answerButtonsElement
+
+var startButton = document.getElementById('start-button');
+var nextButton = document.getElementById('next-button')
+var questionsContainerElement = document.getElementById('question-container'); 
+var questionElement = document.getElementById('question', 'answer-buttons'); 
 let shuffledQuestions, currentQuestionIndex;
 
 
@@ -24,7 +18,7 @@ startButton.addEventListener('click', startGame);
   
 function startGame() {
   console.log('game started') //logs if start button is clicked
-  startButton.classList.add('hide') // hides start button once selected
+  startButton.classList.add('hide') // hides start button once clicked and first question shows
   shuffledQuestions = questions.sort(() => Math.random() - .5) //gives random array of questions
   questionsContainerElement.classList.remove('hide') //removes hide from questions once start button is clicked
   currentQuestionIndex = 0
@@ -93,6 +87,7 @@ const questions = [
   // store score  and initial in local to be called by leader board     
   // display score to user in leader board
   // display initials next to score in leader board
+  // unhide start button
 
 
 
@@ -103,5 +98,9 @@ const questions = [
     // return hidden question
     // way to check if answer is true or false //done
     // if true reveal next question //using next button
-  
+    // question-container
+    // next-button
+    // answer-buttons
+    // start-button
+    // question
 
