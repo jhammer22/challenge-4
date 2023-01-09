@@ -47,6 +47,7 @@ body {
   border: black 100%, 30%;
   background-color: blueviolet;
   border-radius: 10px;
+  color: white;
 }
 
 .button:hover {

@@ -96,57 +96,57 @@ function clearStatusClass(element) {
 
 const questions = [
   {
-    question: "How does positrac work in a Plymouth?",
+    question: "How does PosiTrac work in a Plymouth?",
     answers: [
-      { text: "Nobody knows", correct: true },
-      { text: "Osmosis", correct: false },
-      { text: "Rainbow Dust", correct: false },
-      { text: "Unicorn Farts", correct: false }
+      { text: "Nobody knows.", correct: true },
+      { text: "Osmosis.", correct: false },
+      { text: "Rainbow Dust.", correct: false },
+      { text: "Unicorn Farts.", correct: false }
     ]
   },
   {
-    question: "Did you struggle with this challenge",
+    question: "Did you struggle with this challenge?",
     answers: [
-      { text: "Yes", correct: true },
-      { text: "A lot", correct: true },
-      { text: "Sure did",  correct: true },
-      { text: "You had better believe it", correct: true },
+      { text: "Yes but I learned a lot.", correct: true },
+      { text: "A lot.", correct: true },
+      { text: "Sure did.",  correct: true },
+      { text: "You had better believe it.", correct: true },
     ]
   },
   {
     question: "When writing loops what should you double check for so you don't crash your browser?",
     answers: [
-      { text: "Fruit", correct: false },
-      { text: "Gremlins", correct: false },
-      { text: "Check for eventual false", correct: true },
-      { text: "Monsters under the bed", correct: true }
+      { text: "Fruit.", correct: false },
+      { text: "Gremlins.", correct: false },
+      { text: "Check for eventual false.", correct: true },
+      { text: "Monsters under the bed.", correct: true }
     ]
   },
   {
-    question: "When writing a string what is the difference between single and double quotes",
+    question: "When writing a string what is the difference between single and double quotes?",
     answers:[
-      { text: "Nothing", correct: true },
-      { text: "Internal document string vs User displayed string elements", correct: true },
-      { text: "User preference", correct: true },
-      { text: "Easier to read", correct: true },
+      { text: "Nothing.", correct: true },
+      { text: "Internal document string vs User displayed string elements.", correct: true },
+      { text: "User preference.", correct: true },
+      { text: "Easier to read.", correct: true },
     ]
   },
   {
     question: "What will Josh change his Zoom name to today?",
     answers:[
-      { text: "Papa Splice", correct: true },
-      { text: "Daddy Josh", correct: true },
-      { text: "Repo Master", correct: true },
-      { text: "Bob Ross", correct: true },
+      { text: "Papa Splice.", correct: true },
+      { text: "Daddy Josh.", correct: true },
+      { text: "Repo Master.", correct: true },
+      { text: "Bob Ross.", correct: true },
     ]
   },
   {
     question: "Where do you link JavaScript in HTML",
     answers:[
-      { text: "Yes", correct: false },
-      { text: "After body", correct: true },
-      { text: "In the head", correct: false },
-      { text: "What is JavaScript", correct: false },
+      { text: "Yes.", correct: false },
+      { text: "At the end of the document.", correct: true },
+      { text: "In the head.", correct: false },
+      { text: "What is JavaScript.", correct: false },
     ]
   },
 
