@@ -9,7 +9,7 @@ var nextButton = document.getElementById('next-button')
 var questionsContainerElement = document.getElementById('question-container'); 
 var questionElement = document.getElementById('question'); 
 var answerButtonsElement = document.getElementById('answer-buttons');
-// var timerElement = document.getElementById('timer')
+
 let shuffledQuestions, currentQuestionIndex;
 
 
@@ -19,17 +19,9 @@ nextButton.addEventListener('click', () => {
   currentQuestionIndex ++
   setNextQuestion()
 });
- function startTimer(){
-    var timer = setInterval(function(){
-      sec--;
-      timerText.innerText.innerHTML = sec;
-      if (sec < 0) {
-        clearInterval(timer);
-        localStorage.setItem('score', sec);
-        return window.location.assign('./form.html')
-      }
-    })
- }
+
+
+
   
   
 function startGame() {
@@ -61,6 +53,31 @@ function showQuestion(question) {
     answerButtonsElement.appendChild(button); 
   })
 };
+
+var timerElement = document.getElementById('timer') 
+var secondsLeft = 60;
+
+function setTime() {
+  var timerInterval = setInterval(function () {
+    secondsLeft--;
+
+    if(secondsLeft === 0) {
+      clearInterval(timerInterval);
+      clearInterval(timer);
+      localStorage.setItem('score', secondsLeft);
+      console.log('time ran out');
+      sendMessage();
+    }
+  }, 1000);
+};
+
+var timeEl = document.getElementsByClassName('initials')
+
+function sendMessage() {
+  timerElement.textContent = " ";
+};
+
+setTime();
 
 
 function resetState() {
