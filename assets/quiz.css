@@ -75,6 +75,10 @@ body {
   display: none;
 }
 
+.timer {
+  color: black;
+}
+
 
 
 /* set background color for body */

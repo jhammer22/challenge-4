@@ -54,28 +54,30 @@ function showQuestion(question) {
   })
 };
 
-var timerElement = document.getElementById('timer') 
+var timerElement = document.getElementById("timer");
 var secondsLeft = 60;
 
 function setTime() {
   var timerInterval = setInterval(function () {
+    timerElement.textContent = `${secondsLeft}`;
     secondsLeft--;
 
     if(secondsLeft === 0) {
+      timerElement.textContent = "Time Ran Out";
       clearInterval(timerInterval);
       clearInterval(timer);
       localStorage.setItem('score', secondsLeft);
       console.log('time ran out');
-      sendMessage();
+      // sendMessage();
     }
   }, 1000);
 };
 
 var timeEl = document.getElementsByClassName('initials')
 
-function sendMessage() {
-  timerElement.textContent = " ";
-};
+// function sendMessage() {
+//   timerElement.textContent = " ";
+// };
 
 setTime();
 
