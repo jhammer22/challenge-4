@@ -61,7 +61,9 @@ function setTime() {
   var timerInterval = setInterval(function () {
     timerElement.textContent = `${secondsLeft}`;
     secondsLeft--;
-
+    
+    //need if statement for answer correct or wrong
+    //need if statement for all questions answered stop game unhide form
     if(secondsLeft === 0) {
       timerElement.textContent = "Time Ran Out";
       clearInterval(timerInterval);
@@ -186,13 +188,13 @@ const questions = [
 // timer
   
   // if false subtract 15sec and move to next question
-  // store answer
+  
   // if timer reaches 0 stop game display score and do bellow
 
 // once all questions have been answered and score is logged
   // display score
   // reveal initials form
-  // store score  and initial in local to be called by leader board     
+      
   // display score to user in leader board
   // display initials next to score in leader board
   
@@ -212,4 +214,6 @@ const questions = [
     // start-button
     // question
     // unhide start button
+    // store score  and initial in local to be called by leader board
+    // store answer 
 
