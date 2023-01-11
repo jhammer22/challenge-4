@@ -19,7 +19,17 @@ nextButton.addEventListener('click', () => {
   currentQuestionIndex ++
   setNextQuestion()
 });
-
+ function startTimer(){
+    var timer = setInterval(function(){
+      sec--;
+      timerText.innerText.innerHTML = sec;
+      if (sec < 0) {
+        clearInterval(timer);
+        localStorage.setItem('score', sec);
+        return window.location.assign('./form.html')
+      }
+    })
+ }
   
   
 function startGame() {
@@ -151,6 +161,8 @@ const questions = [
   },
 
 ];
+
+
 
 // timer
   

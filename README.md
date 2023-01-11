@@ -11,3 +11,4 @@ https://www.w3schools.com/js/js_htmldom_methods.asp
 https://www.w3schools.com/js/js_validation.asp
 https://www.w3schools.com/js/js_object_display.asp
 https://www.w3schools.com/js/js_let.asp
+https://www.w3schools.com/jsref/prop_win_localstorage.asp
